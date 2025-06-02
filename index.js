@@ -53,7 +53,7 @@ async function fetchUserWeatherInfo(coordinates){
     grantAccessContainer.classList.remove("active");
     loadingScreen.classList.add("active");
     try{
-        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`);
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`);
         const data = await res.json();
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
